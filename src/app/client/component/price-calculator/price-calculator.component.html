@@ -1,0 +1,36 @@
+<div class="section">
+  <div class="container">
+    <div class="row full-height justify-content-center">
+      <div class="col-12 text-center align-self-center py-5">
+        <div class="section pb-1 pt-5 pt-sm-2 text-center">
+          <div class="card-3d-wrap mx-auto">
+            <div class="card-3d-wrapper">
+              <div class="card-front">
+                <div class="center-wrap">
+                  <div class="section text-center">
+                    <h1 class="mb-4 pb-3 text-light"> AS YILDIZ KALİTESİ İLE HIZLICA FİYATLARINIZI HESAPLAYIN </h1>
+                    <div class="form-group">
+                      <input type="text" name="logemail" class="form-style" placeholder="Miktar" id="logemail"
+                        autocomplete="off" type="text" class="form-control" aria-label="amount" [(ngModel)]="miktar">
+
+                    </div>
+                    <div class="form-group">
+                      <select class="selectpicker form-control" id="select1" [(ngModel)]="myDropDown"
+                        (ngModelChange)="onChangeofOptions($event)">
+                        <option *ngFor="let data of footerList" value="{{  data.Ask}}">{{data.Code}}</option>
+                      </select>
+                    </div>
+                    <div class="form-group mt-2">
+                      <input type="text" class="form-control" type="text" value="{{sonuc}}" name="logpass"
+                        class="form-style" placeholder="Sonuç" id="logpass" autocomplete="off" disabled>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

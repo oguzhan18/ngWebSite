@@ -1,0 +1,28 @@
+<header [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">
+  <div id="nav-head">
+    <div id="logo" [ngClass]="{'darkimage': this.isDarkMode== true,'lightimage': this.isDarkMode== false}"></div>
+    <label for="menu-toggle">
+      <div class="toggle-icon">
+        <mat-icon>menu</mat-icon>
+      </div>
+    </label>
+  </div>
+  <input type="checkbox" id="menu-toggle">
+  <ul class="nav-links">
+    <li><a routerLink="/" [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">ANA
+        SAYFA</a>
+
+    <li><a routerLink="about"
+        [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">KURUMSAL</a>
+    </li>
+    <li><a routerLink="ourstores"
+        [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">MAĞAZALARIMIZ</a></li>
+    <li><a routerLink="services"
+        [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">HİZMETLERİMİZ</a></li>
+    <li><a routerLink="contact" [ngClass]="{'darkmode': this.isDarkMode== true,'lightmode': this.isDarkMode== false}">İLETİŞİM</a>
+    </li>
+    <li>
+      <mat-slide-toggle (click)="toggleDarkMode()" [(ngModel)]="isDarkMode"></mat-slide-toggle>
+    </li>
+  </ul>
+</header>

@@ -1,0 +1,144 @@
+$darkbackColor: #3f3f4d;
+$darktextColor: #101010;
+$lightbackColor: #ececec;
+$lighttextColor: #ececec;
+
+:root {
+  --dark: #6a5acd;
+  --light: #ffffff;
+}
+
+
+header {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+}
+
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked+.nav-links {
+  display: block;
+}
+
+header .nav-links {
+  display: none;
+}
+
+header label {
+  cursor: pointer;
+  position: relative;
+
+}
+
+.toggle-icon {
+  width: 30px;
+}
+
+.toggle-icon div {
+  height: 3px;
+  margin: 3px 0;
+}
+
+#nav-head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  padding: 20px 0;
+  margin-top: 1em;
+}
+
+.nav-links li:nth-child(1) {
+  padding-top: 40px;
+}
+
+@media only screen and (min-width: 900px) {
+  .toggle-icon {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-links li {
+    display: inline-block;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .nav-links li:nth-child(1) {
+    padding-top: 0;
+  }
+
+  #menu-toggle:not(:checked)+.nav-links {
+    display: block;
+  }
+}
+
+.darkmode {
+  background-color: $darkbackColor;
+  color: $lighttextColor;
+
+  a {
+
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 17px;
+    transition: color 200ms linear;
+    will-change: color;
+
+    &:hover,
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.lightmode {
+  background-color: $lightbackColor;
+  color: $darktextColor;
+
+  a {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 17px;
+    transition: color 200ms linear;
+    will-change: color;
+
+    &:hover,
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+.darkimage {
+  display: inline-block;
+  width: 250px;
+  height: 48px;
+  background: url('../../../../../assets/assest/logos/darklogo.png');
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.lightimage {
+  display: inline-block;
+  width: 250px;
+  height: 50px;
+  background: url('../../../../../assets/assest/logos/lightlogo.png') no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+}

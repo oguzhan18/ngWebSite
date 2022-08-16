@@ -1,0 +1,87 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+#para1 {
+  background-image: url("../../../../assets/assest/image/imagedraver.jpeg");
+}
+
+#para2 {
+  background-image: url("http://i.imgur.com/LSHfLZJ.jpg");
+}
+
+#para3 {
+  background-image: url("http://i.imgur.com/ap9HiBH.jpg");
+}
+
+
+
+.bb-para {
+  height: 60vh;
+  width: 100%;
+  color: white;
+  background-size: cover;
+  background-attachment: fixed;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bb-para h2 {
+  font-weight: light;
+}
+
+.scroll-cta {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: .5em;
+  padding: 1em 4em;
+}
+
+.scroll-divider {
+  // background-color: white;
+}
+
+.para-text {
+  color: white;
+  font-weight: bold;
+  padding: 5em;
+  box-sizing: border-box;
+}
+
+.para-text::first-child {
+  background-color: black;
+}
+
+h2 {
+  cursor: pointer;
+}
+
+.image-context-background {
+  background-color: rgba(0, 0, 0, 0.731);
+  height: 100vh;
+}
+
+.image-comtext {
+  position: absolute;
+  left: 45%;
+  margin-top: 10%;
+}
+h1{
+  font-size: 3em;
+}
+
+
+.image-comtext  {
+  background-color: red;
+  background-image: linear-gradient(45deg, #deb019, #ffffff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}

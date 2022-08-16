@@ -1,0 +1,160 @@
+// $imageWidth: 400px;
+// // $imageHeight: 200px;
+
+// $carouselNumImages: 4;
+// $carouselDurationPerImage: 5s;
+// $carouselDuration: $carouselNumImages * $carouselDurationPerImage;
+// $carouselImageWidth: 100% / $carouselNumImages;
+// $carouselTrackWidth: 100% * $carouselNumImages;
+
+// body {
+//   margin: 0;
+// }
+
+// .carousel {
+//   position: relative;
+//   overflow: hidden;
+//   width: 100%;
+// }
+
+// .carousel-track {
+//   width: $carouselTrackWidth;
+//   animation: carousel $carouselDuration linear infinite;
+// }
+
+// .carousel img {
+//   display: inline-block;
+//   width: $carouselImageWidth;
+//   float: left;
+// }
+
+// @keyframes carousel {
+//   /* add/remove steps if more/less images */
+//   0%,
+//   23% {
+//     transform: translate3d(0,0,0);
+//   }
+//   25%,
+//   48% {
+//     transform: translate3d(-25%,0,0);
+//   }
+//   50%,
+//   73% {
+//     transform: translate3d(-50%,0,0);
+//   }
+//   75%,
+//   98% {
+//     transform: translate3d(-75%,0,0);
+//   }
+//   100% {
+//     transform: translate3d(0,0,0);
+//   }
+// }
+
+@import url(https://fonts.googleapis.com/css?family=Fira+Sans:100,200,300,400,500,600,700,800,900);
+
+@keyframes carousel {
+  0% {
+    left: 0%;
+  }
+
+  20% {
+    left: 0%;
+  }
+
+  25% {
+    left: -100%;
+  }
+
+  45% {
+    left: -100%;
+  }
+
+  50% {
+    left: -200%;
+  }
+
+  70% {
+    left: -200%;
+  }
+
+  75% {
+    left: -300%;
+  }
+
+  95% {
+    left: -300%;
+  }
+
+  100% {
+    left: -400%;
+  }
+}
+
+body {
+  margin: 0;
+  background: #111;
+}
+
+/*------------------------------------*\
+    $CAROUSEL
+\*------------------------------------*/
+.carousel {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 100%;
+  background: #000;
+}
+
+.panes {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  width: 500%;
+  /* Number of panes * 100% */
+  overflow: hidden;
+  /* This is used solely to clear floats, it does not add functionality. */
+
+  -moz-animation: carousel 30s infinite;
+  -webkit-animation: carousel 30s infinite;
+  animation: carousel 30s infinite;
+}
+
+.panes>li {
+  position: relative;
+  float: left;
+  width: 20%;
+  /* 100 / number of panes */
+}
+
+.carousel img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}
+
+.carousel h2 {
+  font-family: Fira Sans, sans-serif;
+  padding: 0.5em;
+  position: absolute;
+  // right:20px;
+  // bottom:10px;
+  // left:20px;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  text-shadow: 1px 1px 4px #000;
+  background-color: rgba(0, 0, 0, 0.548);
+}
+
+.image-comtemt {
+  position: absolute;
+  top: 30%;
+  margin-left: 15%;
+  text-align: center;
+
+  font-size: 2.6rem;
+  text-shadow: 3px 3px black;
+}
