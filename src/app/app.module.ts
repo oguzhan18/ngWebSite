@@ -31,6 +31,7 @@ import { OurstoresComponent } from './client/pages/ourstores/ourstores.component
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { OurservicesComponent } from './client/pages/ourservices/ourservices.component';
 import { ContactComponent } from './client/pages/contact/contact.component';
+import { LivePriceComponent } from './client/pages/live-price/live-price.component';
 
 
 @NgModule({
@@ -48,7 +49,8 @@ import { ContactComponent } from './client/pages/contact/contact.component';
     AboutComponent,
     OurstoresComponent,
     OurservicesComponent,
-    ContactComponent
+    ContactComponent,
+    LivePriceComponent
 
 
   ],

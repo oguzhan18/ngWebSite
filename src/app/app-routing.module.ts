@@ -10,6 +10,7 @@ import { OurstoresComponent } from './client/pages/ourstores/ourstores.component
 const routes: Routes = [
   // { path: '', loadChildren: () => import('./client/client.module').then(m => m.ClientModule) },
   {path:'', component:HomeComponent},
+  {path:'home', component:HomeComponent},
   {path:'about', component:AboutComponent},
   {path:'ourstores', component:OurstoresComponent},
   {path:'services', component:OurservicesComponent},
