@@ -24,8 +24,14 @@
     "angular-dark-mode": "^3.0.2",
     "angular-responsive-carousel": "^2.1.2",
     "bootstrap": "^5.2.0",
+    "buffer": "^6.0.3",
+    "events": "^3.3.0",
+    "ngx-drag-scroll": "12.0.0-beta.1",
     "rxjs": "~6.6.0",
+    "stream": "0.0.2",
+    "timers": "^0.1.1",
     "tslib": "^2.0.0",
+    "xml2js": "^0.4.23",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {
@@ -34,6 +40,7 @@
     "@angular/compiler-cli": "~11.2.1",
     "@types/jasmine": "~3.6.0",
     "@types/node": "^12.11.1",
+    "@types/xml2js": "^0.4.11",
     "codelyzer": "^6.0.0",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",

@@ -32,6 +32,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import { OurservicesComponent } from './client/pages/ourservices/ourservices.component';
 import { ContactComponent } from './client/pages/contact/contact.component';
 import { LivePriceComponent } from './client/pages/live-price/live-price.component';
+import { NewsComponent } from './client/component/news/news.component';
+import { DragScrollModule } from 'ngx-drag-scroll';
+import { PriceTableComponent } from './client/component/price-table/price-table.component';
 
 
 @NgModule({
@@ -50,7 +53,9 @@ import { LivePriceComponent } from './client/pages/live-price/live-price.compone
     OurstoresComponent,
     OurservicesComponent,
     ContactComponent,
-    LivePriceComponent
+    LivePriceComponent,
+    NewsComponent,
+    PriceTableComponent
 
 
   ],
@@ -62,7 +67,7 @@ import { LivePriceComponent } from './client/pages/live-price/live-price.compone
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-
+    DragScrollModule,
 
     IvyCarouselModule,
     MatIconModule,

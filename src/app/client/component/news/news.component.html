@@ -1,0 +1,13 @@
+<div class="container ">
+  <drag-scroll #nav [scroll-x-wheel-enabled]="true">
+    <div *ngFor="let news of technewsDisplay; let i = index" drag-scroll-item>
+      <div class="card shadow-sm">
+        <img src="{{news.urlToImage}}" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"> <strong>{{ news.title }}</strong> </h5>
+          <a href="{{news.url}}" target="_blank">Habere Git</a>
+        </div>
+      </div>
+    </div>
+  </drag-scroll>
+</div>
