@@ -21,13 +21,6 @@ export class TableComponent implements OnInit {
 
   isDarkMode: boolean;
   showFiller = false;
-
-
-
-
-
-
-
   isClicked: boolean = false;
   currencyList: SocketData[] = [];
   goldList: SocketData[] = [];
