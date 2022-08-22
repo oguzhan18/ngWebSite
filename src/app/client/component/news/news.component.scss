@@ -1,25 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@100;300;400;500;700;900&display=swap');
 
-.card {
-  height:15rem;
-  width: 15rem;
-  border-radius: 0.75rem;
-}
+// .card {
+//   height:15rem;
+//   width: 15rem;
+//   border-radius: 0.75rem;
+// }
 
 
-.card-title {
-  color: black;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-family: 'Noto Sans SC', sans-serif;
-}
-strong{
-  font-weight: 900;
-}
+// .card-title {
+//   color: black;
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+//   font-family: 'Noto Sans SC', sans-serif;
+// }
+// strong{
+//   font-weight: 900;
+// }
 
 
 // drag-scroll {
 //   height: 20rem;
 //   width: 100%;
 // }
+// s
+table tr:nth-child(odd) {
+  border-top: 2px solid  #ffffff;
+  height: 50%;
+  overflow: scroll;
+}
+table tr:nth-child(even) {
+
+  background-color: #b39860;
+  height: 50%;
+}

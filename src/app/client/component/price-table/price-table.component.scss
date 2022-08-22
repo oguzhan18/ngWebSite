@@ -11,7 +11,6 @@ $lighttextColor: #ececec;
 
 td,
 th {
-  padding: 15px 5px;
   display: table-cell;
   text-align: left;
   vertical-align: middle;
@@ -73,6 +72,7 @@ thead {
   // color: black;
   border-bottom: 1px solid #ffffff;
   background-color: rgb(213, 213, 213);
+  color: #000000;
   // color: rgb(0, 0, 0);
 }
 
@@ -179,3 +179,161 @@ table tbody tr td:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #b3000000;
 }
+
+
+
+/****** ****** ******* ****** /@
+ /*--- icons --*/
+
+.fa-code{
+  color: #e54d26;
+}
+.fa-bold{
+  color: #563d7c;
+}
+.fa-css3-alt{
+  color: #2163af;
+}
+.fa-code, .fa-css3-alt, .fa-bold{
+  font-size: 2.1em;
+  margin:1rem;
+}
+/*--- icons --*/
+
+
+
+body {
+  font-family:monospace ;
+
+}
+
+img{
+  width:50%;
+
+}
+#logo{
+  color:white !important;
+  font-size:1.8rem;
+  margin-bottom:0;
+  cursor:pointer;
+}
+/*--- navbar --*/
+.navbar{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family:bold;
+  font-size:1rem;
+  letter-spacing:.1rem;
+   background: rgba(0,0,0,.6)!important;
+}
+.logo{
+  font-size: 1.6rem;
+
+}
+.navbar-nav li{
+  padding-right:.7rem;
+}
+.nav-link ,.logo{
+  color:white !important;
+  padding-top: .8rem;
+}
+.nav-link:hover{
+ color: rgba(255,255,255,.8)!important;
+}
+.logo:hover{
+ color: rgba(255,255,255,.8)!important;
+}
+
+/*--- slider --*/
+.carousel-item{
+  height: 100vh;
+}
+/*--- carousel --*/
+.carousel-caption{
+  position:absolute;
+  top:38%;
+  text-transform:uppercase;
+     text-shadow: 4px 4px 4px black;
+}
+.carousel-caption h1{
+ font-size: 2.8rem;
+  font-weight:700;
+  letter-spacing:.2rem;
+  right:0;
+  left:0;
+
+}
+.carousel-caption h3{
+ font-size: 2rem;
+
+
+  right:0;
+  left:0;
+  text-shadow: 4px 4px 4px black;
+
+}
+.btn-lg{
+  opacity:0.7;
+
+}
+.btn-lg:hover{
+  opacity:1;
+}
+/*--- jumbotron --*/
+.jumbotron{
+  border-radius:0;
+  padding: 1rem 1rem 1rem;
+}
+/*--- portfolio --*/
+h3.heading{
+  font-size:1.9rem;
+  font-weight:700;
+  text-transform:uppercase;
+
+}
+.heading-underline{
+  width: 10%;
+  height: .2rem;
+  background-color: black;
+  margin: 0 auto 2rem;
+}
+
+.portfolio img{
+   max-width: 90%;
+  min-width: 90%;
+   min-height: 18rem;
+
+   max-height: 18rem;
+
+
+  margin-bottom:2rem;
+  transition: transform .2s;
+
+}
+
+
+.portfolio img:hover{
+  transform: scale(1.1);
+  cursor: zoom-in;
+    overflow: hidden;
+}
+.row.no-padding [class*=col-]{
+  padding:0;
+  margin:0;
+}
+
+
+
+
+/*--- Extra Bootstrap Column Padding --*/
+[class*="col-"] {
+  padding: 1rem;
+}
+
+/*--- Bootstrap Mobile Gutter Fix --*/
+.row, .container-fluid {
+  margin-left: 0px!important;
+  margin-right: 0px!important;
+}
+
+

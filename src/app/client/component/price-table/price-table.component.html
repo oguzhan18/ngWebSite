@@ -1,201 +1,6 @@
-<!-- <div class="home-container col-12">
-  <div class="ziynet-div col-sm-12 col-md-6 ">
-    <div class="grid-container">
-      <div class="title">
-        <div class="title-fixed col-10">
-          <div class="categoryName col-sm-6 col-md-6 col-lg-6">
-            Döviz Fiyatları
-          </div>
-          <div class="bid col-sm-3 col-md-3 col-lg-3" translate>
-            Alış
-          </div>
-          <div class="ask col-sm-3 col-md-3 col-lg-3" translate>
-            Satış
-          </div>
-        </div>
-        <div class="click-icon col-3" (click)="resizeDiv('currencyContainer')">
-          <i class="material-icons">aspect_ratio</i>
-        </div>
-      </div>
-
-      <div class="overflow-box" id="currencyContainer">
-        <div class="grid-box" *ngFor="let data of currencyList ; let i=index; trackBy : trackByPrice">
-          <div class="grid-card" (click)="toggle(data)" [ngClass]="{'grid-card-up': data.askPercentChange >0,
-                 'grid-card-down': data.askPercentChange <0}">
-            <span class="grid-text col-sm-3 col-md-3 col-lg-3">
-              {{data.Code}}
-            </span>
-            <div class="price-tag col-sm-9 col-md-9 col-lg-9">
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange>0"
-                style="color: #3a9d37;padding: 0;text-align: center">
-                <i class="fa fa-angle-up"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange<0"
-                style="color: #f25961;padding: 0;text-align: center">
-                <i class="fa fa-angle-down"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange===0 || !data.askPercentChange"
-                style="color: orange;padding: 0;text-align: center">
-                <i class="fa fa-minus"></i>
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Bid | number:'1.4-4'}}
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Ask | number:'1.4-4'}}
-              </span>
-              <span *ngIf="data.askPercentChange>0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #3a9d37">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange<0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #f25961">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange==0 || !data.askPercentChange"
-                class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: orange">
-                %{{data.askPercentChange}}.00
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ziynet-div col-sm-12 col-md-6 ">
-    <div class="grid-container">
-      <div class="title">
-        <div class="title-fixed col-10">
-          <div class="categoryName col-sm-6 col-md-6 col-lg-6">
-            Parite Fiyatları
-          </div>
-          <div class="bid col-sm-3 col-md-3 col-lg-3" translate>
-            Alış
-          </div>
-          <div class="ask col-sm-3 col-md-3 col-lg-3" translate>
-            Satış
-          </div>
-        </div>
-        <div class="click-icon col-3" (click)="resizeDiv('pariteContainer')">
-          <i class="material-icons">aspect_ratio</i>
-        </div>
-      </div>
-
-      <div class="overflow-box" id="pariteContainer">
-        <div class="grid-box" *ngFor="let data of parityList; let i=index; trackBy : trackByPrice">
-          <div class="grid-card" (click)="toggle(data)" [ngClass]="{'grid-card-up': data.askPercentChange >0,
-                 'grid-card-down': data.askPercentChange <0}">
-            <span class="grid-text col-sm-3 col-md-3 col-lg-3">
-              {{data.Code}}
-            </span>
-            <div class="price-tag col-sm-9 col-md-9 col-lg-9">
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange>0"
-                style="color: #3a9d37;padding: 0;text-align: center">
-                <i class="fa fa-angle-up"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange<0"
-                style="color: #f25961;padding: 0;text-align: center">
-                <i class="fa fa-angle-down"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange===0 || !data.askPercentChange"
-                style="color: orange;padding: 0;text-align: center">
-                <i class="fa fa-minus"></i>
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Bid | number:'1.4-4'}}
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Ask | number:'1.4-4'}}
-              </span>
-              <span *ngIf="data.askPercentChange>0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #3a9d37">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange<0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #f25961">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange==0 || !data.askPercentChange"
-                class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: orange">
-                %{{data.askPercentChange}}.00
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="ziynet-div col-sm-12 col-md-6 " style="overflow: scroll;">
-    <div class="grid-container">
-      <div class="title">
-        <div class="title-fixed col-10">
-          <div class="categoryName col-sm-6 col-md-6 col-lg-6">
-            Ziynet Fiyatları
-          </div>
-          <div class="bid col-sm-3 col-md-3 col-lg-3" translate>
-            Alış
-          </div>
-          <div class="ask col-sm-3 col-md-3 col-lg-3" translate>
-            Satış
-          </div>
-        </div>
-        <div class="click-icon col-3" (click)="resizeDiv('ziynetContainer')">
-          <i class="material-icons">aspect_ratio</i>
-        </div>
-      </div>
-      <div class="overflow-box" id="ziynetContainer">
-        <div class="grid-box" *ngFor="let data of ziynetList ; let i=index; trackBy : trackByPrice">
-          <div class="grid-card" (click)="toggle(data)" [ngClass]="{'grid-card-up': data.askPercentChange >0,
-                 'grid-card-down': data.askPercentChange <0}">
-            <span class="grid-text col-sm-3 col-md-3 col-lg-3">
-              {{data.Code}}
-            </span>
-            <div class="price-tag col-sm-9 col-md-9 col-lg-9">
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange>0"
-                style="color: #3a9d37;padding: 0;text-align: center">
-                <i class="fa fa-angle-up"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange<0"
-                style="color: #f25961;padding: 0;text-align: center">
-                <i class="fa fa-angle-down"></i>
-              </span>
-              <span class="col-sm-3 col-md-3 col-lg-3" *ngIf="data.askPercentChange===0 || !data.askPercentChange"
-                style="color: orange;padding: 0;text-align: center">
-                <i class="fa fa-minus"></i>
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Bid | number:'1.4-4'}}
-              </span>
-              <span class="price col-sm-3 col-md-3 col-lg-3">
-                {{data.Ask | number:'1.4-4'}}
-              </span>
-              <span *ngIf="data.askPercentChange>0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #3a9d37">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange<0" class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: #f25961">
-                %{{data.askPercentChange}}
-              </span>
-              <span *ngIf="data.askPercentChange==0 || !data.askPercentChange"
-                class="grid-all col-sm-3 col-md-3 col-lg-3" style="color: orange">
-                %{{data.askPercentChange}}.00
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="ziynet-div col-sm-12 col-md-6 ">
-    <div class="tradingview-widget-container">
-      <div id="tradingview_f1799"></div>
-      <script type="text/javascript">
-
-      </script>
-    </div>
-  </div>
-</div> -->
-
 <div class="row w-100">
   <div class="bods col col-lg-3">
-    <div class="card"  >
+    <div class="card">
       <table class="material-table">
         <thead class="sticky-top">
           <tr>
@@ -233,7 +38,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody *ngFor="let gramadata of ziynetList; let i=index; trackBy : trackByPrice"  [ngClass]="{'grid-up': gramadata.askPercentChange >0,
+        <tbody *ngFor="let gramadata of ziynetList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,
           'grid-down': gramadata.askPercentChange <0}">
           <tr>
             <td> {{gramadata.Code}} </td>
@@ -260,7 +65,7 @@
             <th></th>
           </tr>
         </thead>
-        <tbody *ngFor="let gramadata of ziynetList; let i=index; trackBy : trackByPrice"  [ngClass]="{'grid-up': gramadata.askPercentChange >0,
+        <tbody *ngFor="let gramadata of parityList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,
           'grid-down': gramadata.askPercentChange <0}">
           <tr>
             <td> {{gramadata.Code}} </td>
@@ -276,34 +81,52 @@
       </table>
     </div>
   </div>
+  <div class="bods col col-lg-3">
+    <div class="card">
+      <table class="material-table">
+        <thead class="sticky-top">
+          <tr>
+            <th> ALTIN</th>
+            <th>ALIŞ</th>
+            <th>SATIŞ</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let gramadata of currencyList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,
+          'grid-down': gramadata.askPercentChange <0}">
+          <tr>
+            <td> {{gramadata.Code}} </td>
+            <td style="font-size: 16px;">{{gramadata.Bid| number:'1.2-4' }}</td>
+            <td style="font-size: 16px;">{{gramadata.Ask| number:'1.2-4' }}</td>
+            <td style="font-size: 16px;">
+              <i class="material-icons" *ngIf="gramadata.askPercentChange > 0">keyboard_arrow_up</i>
+              <i class="material-icons" *ngIf="gramadata.askPercentChange == 0">remove</i>
+              <i class="material-icons" *ngIf="gramadata.askPercentChange < 0">keyboard_arrow_down</i>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-
-
+  </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class='row text-center padding'>
+  <div id='Portfolio'>
+    <div class='jumbotron container-fluid'>
+      <div class='row no-padding'>
+        <div class='col-sm-4'>
+          <div class='portfolio'>
+            <app-chart></app-chart>
+          </div>
+        </div>
+        <div class='col-sm-4'>
+          <div class='portfolio'>
+            <app-pricecalc></app-pricecalc>
+          </div>
+        </div>
+        <div class='col-sm-4'>
+          <div class='portfolio' style="overflow:scroll ; height: 25em;">
+            <app-news></app-news>
+          </div>
+        </div>
+      </div><br><br>

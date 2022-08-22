@@ -39,7 +39,7 @@ $app-dark-theme: mat-dark-theme($mat-primary-palette, $mat-accent-palette);
 .dark-mode {
   @include angular-material-theme($app-dark-theme);
 
-  background-color: #333;
+  background-color: rgb(0, 0, 0);
   color: whitesmoke;
 }
 

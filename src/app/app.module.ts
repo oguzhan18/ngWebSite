@@ -3,9 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FooterComponent } from './client/utils/footer/footer.component';
+import { FooterComponent } from './client/utils/footers/footer/footer.component';
 import { TopbarComponent } from './client/utils/navs/topbar/topbar.component';
-import { PricebarComponent } from './client/utils/navs/pricebar/pricebar.component';
 import { HomeComponent } from './client/pages/home/home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,14 +34,19 @@ import { LivePriceComponent } from './client/pages/live-price/live-price.compone
 import { NewsComponent } from './client/component/news/news.component';
 import { DragScrollModule } from 'ngx-drag-scroll';
 import { PriceTableComponent } from './client/component/price-table/price-table.component';
-
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { PricecalcComponent } from './client/component/pricecalc/pricecalc.component';
+import { ChartComponent } from './client/component/chart/chart.component';
+import { PriceFooterComponent } from './client/utils/footers/price-footer/price-footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     TopbarComponent,
-    PricebarComponent,
     HomeComponent,
     CarouselComponent,
     TableComponent,
@@ -55,7 +59,10 @@ import { PriceTableComponent } from './client/component/price-table/price-table.
     ContactComponent,
     LivePriceComponent,
     NewsComponent,
-    PriceTableComponent
+    PriceTableComponent,
+    PricecalcComponent,
+    ChartComponent,
+    PriceFooterComponent
 
 
   ],
@@ -71,6 +78,11 @@ import { PriceTableComponent } from './client/component/price-table/price-table.
 
     IvyCarouselModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+
 
     MatCheckboxModule,
     MatTableModule,

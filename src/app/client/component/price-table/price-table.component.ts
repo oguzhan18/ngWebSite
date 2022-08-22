@@ -1,11 +1,14 @@
 import { Component, OnInit, Renderer2, AfterViewInit } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 import { Subscription } from 'rxjs';
+import { webSocket } from 'rxjs/webSocket';
 import { HomeProvider } from '../../service/home.provider';
 import { ThemeService } from '../../service/theme.service';
 import { CATEGORYTYPE } from '../../service/_models/categoryType';
+import { servers } from '../../service/_models/configuration';
 import { SocketData } from '../../service/_models/socketData';
 
-declare const TradingView: any;
+
 
 @Component({
   selector: 'app-price-table',
@@ -13,6 +16,15 @@ declare const TradingView: any;
   styleUrls: ['./price-table.component.scss'],
 })
 export class PriceTableComponent implements OnInit {
+
+  connection = webSocket(servers.real);
+  footerList: SocketData[] = [];
+  date: Date = new Date();
+  miktar:any;
+  sonuc:any;
+  secilen:any;
+  myDropDown : string="";
+
   showFiller = false;
   isClicked: boolean = false;
   currencyList: SocketData[] = [];
@@ -21,6 +33,9 @@ export class PriceTableComponent implements OnInit {
   parityList: SocketData[] = [];
   kriptoList: SocketData[] = [];
   ziynetList: SocketData[] = [];
+
+
+  selectItems: SocketData[] = [];
 
   dataListReplace1: SocketData[] = [];
   dataListReplace2: SocketData[] = [];
@@ -38,6 +53,7 @@ export class PriceTableComponent implements OnInit {
   constructor(private renderer: Renderer2, private wsService: HomeProvider) {}
 
   ngOnInit() {
+    console.log(this.selectItems);
     this.interval = setInterval(() => {
       if (this.pingStatus === false) {
         this.subscriptions.unsubscribe();
@@ -92,6 +108,9 @@ export class PriceTableComponent implements OnInit {
     if (this.ziynetList) {
       this.ziynetList = [];
     }
+    if (this.selectItems) {
+      this.selectItems = [];
+    }
     this.socketDataList.forEach((item, index) => {
       if (item.Category === CATEGORYTYPE.DOVIZ) {
         this.currencyList.push(item);
@@ -103,6 +122,9 @@ export class PriceTableComponent implements OnInit {
         this.ziynetList.push(item);
       } else if (item.Category === CATEGORYTYPE.METAL) {
         this.goldList.push(item);
+      }
+      else if (item.Category === CATEGORYTYPE.DOVIZ) {
+        this.selectItems.push(item);
       }
     });
     if (this.dataListReplace1.length !== 0) {
@@ -263,6 +285,9 @@ export class PriceTableComponent implements OnInit {
   }
 
   ngOnDestroy(): void {
-    // clearInterval(this.interval);
+    clearInterval(this.interval);
   }
+
+
+
 }

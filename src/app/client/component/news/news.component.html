@@ -1,4 +1,4 @@
-<div class="container ">
+<!-- <div class="container ">
   <drag-scroll #nav [scroll-x-wheel-enabled]="true">
     <div *ngFor="let news of technewsDisplay; let i = index" drag-scroll-item>
       <div class="card shadow-sm">
@@ -10,4 +10,34 @@
       </div>
     </div>
   </drag-scroll>
-</div>
+</div> -->
+
+
+<!-- <table class="table">
+  <tbody *ngFor="let news of technewsDisplay; let i = index">
+    <tr>
+      <th scope="row">{{ news.title }}</th>
+      <td>{{ news.description}}</td>
+
+    </tr>
+
+
+  </tbody>
+</table> -->
+<!-- <table class="table"  *ngFor="let news of technewsDisplay; let i = index" >
+  <thead>
+    <tr>
+      <th scope="col">
+        <a target="_blank" href="{{news.url}}">{{ news.title }}</a></th>
+    </tr>
+
+  </thead>
+</table> -->
+<table class="table">
+  <thead>
+    <tr  *ngFor="let news of technewsDisplay;">
+      <th scope="col"><a  target="_blank"  href="{{news.url}}">{{ news.title }}</a></th>
+    </tr>
+  </thead>
+</table>
+

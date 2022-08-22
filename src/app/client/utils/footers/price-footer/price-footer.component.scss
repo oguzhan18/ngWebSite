@@ -1,0 +1,102 @@
+
+@import "~bootstrap/scss/bootstrap";
+
+@media (max-width: 768px) {
+  .slider {
+    display: none !important;
+  }
+}
+
+$animationSpeed: 40s;
+// Animation
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7))
+  }
+}
+
+// Styling
+.slider {
+  margin-top: 3em;
+  overflow: hidden;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  z-index: 1;
+  background-color: map_get($colors, footer-color);
+  align-items: center;
+
+
+  &::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+  }
+
+  &::before {
+    left: 0;
+    top: 0;
+  }
+
+  .slide-track {
+    animation: scroll $animationSpeed linear infinite;
+    display: flex;
+    width: calc(300px * 14);
+
+    .slide {
+      //height: 100px;
+      width: 100%;
+      display: flex;
+      margin: 0 15px;
+
+      .text-parity {
+        font-weight: bold;
+        margin-right: 5px;
+      }
+
+      .text-price {
+        font-weight: 600;
+      }
+    }
+  }
+
+  .slide-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+.footer {
+  font-size: 12px;
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+a {
+  color: #52A5FF;
+}
+.darkmode {
+  background-color:#131722;
+  color: #B2B5BE;
+  thead{
+    background-color: rgb(173, 173, 173);
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+  }
+
+}
+
+.lightmode {
+  background-color:#ffffff;
+  color: #000000;
+
+
+}

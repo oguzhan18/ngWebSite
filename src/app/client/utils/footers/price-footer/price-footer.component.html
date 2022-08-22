@@ -1,0 +1,15 @@
+<div class="slider">
+  <div class="slide-track">
+    <div class="slide" *ngFor="let data of footerList; trackBy : trackByPrice">
+      <div class="text-parity">
+        {{data.Code}}
+      </div>
+      <div class="text-price">
+        <span [ngClass]="{'grid-up': data.askPercentChange >0,
+          'grid-down': data.askPercentChange <0}">   {{data.Ask | number:'1.2-4'}} {{data.Bid | number:'1.2-4'}}</span>
+
+      </div>
+    </div>
+  </div>
+
+</div>
