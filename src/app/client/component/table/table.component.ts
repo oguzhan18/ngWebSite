@@ -1,4 +1,5 @@
-import { Component, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, Inject, Output, EventEmitter, OnInit, AfterViewInit, HostListener, Renderer2 } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 import { MatTableDataSource } from '@angular/material/table';
 import { Subscription } from 'rxjs/internal/Subscription';
 import { HomeProvider } from '../../service/home.provider';
@@ -12,6 +13,10 @@ import { SocketData } from '../../service/_models/socketData';
   styleUrls: ['./table.component.scss'],
 })
 export class TableComponent implements OnInit {
+  elem:any;
+  toggleClass = 'ft-maximize';
+
+  public config: any = {};
   showFiller = false;
   isClicked: boolean = false;
   currencyList: SocketData[] = [];
@@ -34,9 +39,10 @@ export class TableComponent implements OnInit {
   timer: any;
   interval: any;
 
-  constructor(private renderer: Renderer2, private wsService: HomeProvider) {}
+  constructor(private renderer: Renderer2, private wsService: HomeProvider,@Inject(DOCUMENT) private document: any) {}
 
   ngOnInit() {
+    this.elem = document.documentElement;
     this.interval = setInterval(() => {
       if (this.pingStatus === false) {
         this.subscriptions.unsubscribe();
@@ -46,7 +52,9 @@ export class TableComponent implements OnInit {
     }, this.RETRY_SECONDS * 1000);
     this.getData();
   }
-
+  @HostListener('document:keydown.escape', ['$event']) onKeydownHandler(event: KeyboardEvent) {
+    this.closeFullscreen();
+  }
   getData() {
     this.wsService.initSocket();
 
@@ -245,5 +253,42 @@ export class TableComponent implements OnInit {
 
   toggle(socketData: SocketData) {
     this.code = socketData.Code;
+  }
+  openFullscreen() {
+    if (this.elem.requestFullscreen) {
+      this.elem.requestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.mozRequestFullScreen) {
+      /* Firefox */
+      this.elem.mozRequestFullScreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.webkitRequestFullscreen) {
+      /* Chrome, Safari and Opera */
+      this.elem.webkitRequestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    } else if (this.elem.msRequestFullscreen) {
+      /* IE/Edge */
+      this.elem.msRequestFullscreen();
+      this.toggleClass = 'ft-minimize';
+    }
+  }
+
+  closeFullscreen() {
+    if (this.document.exitFullscreen) {
+      this.document.exitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.mozCancelFullScreen) {
+      /* Firefox */
+      this.document.mozCancelFullScreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.webkitExitFullscreen) {
+      /* Chrome, Safari and Opera */
+      this.document.webkitExitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    } else if (this.document.msExitFullscreen) {
+      /* IE/Edge */
+      this.document.msExitFullscreen();
+      this.toggleClass = 'ft-maximize';
+    }
   }
 }

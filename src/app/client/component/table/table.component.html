@@ -1,58 +1,72 @@
-<div class="row w-100">
-  <div class="bods col col-lg-6">
-    <div class="card">
-      <table class="material-table">
-        <thead class="sticky-top">
-          <tr>
+<div style="margin-left:10%;">
 
-            <th> DOVIZ</th>
-            <th>ALIŞ</th>
-            <th>SATIŞ</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let socketData of currencyList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': socketData.askPercentChange >0,
-               'grid-down': socketData.askPercentChange <0}">
-          <tr>
-            <td> {{socketData.Code}} </td>
-            <td style="font-size: 16px;">{{socketData.Bid | number:'1.2-4' }}</td>
-            <td style="font-size: 16px;">{{socketData.Ask | number:'1.2-4' }} </td>
-            <td style="margin-left:70% ;font-size: 16px;">
-              <i class="material-icons" *ngIf="socketData.askPercentChange > 0">keyboard_arrow_up</i>
-              <i class="material-icons" *ngIf="socketData.askPercentChange == 0">remove</i>
-              <i class="material-icons" *ngIf="socketData.askPercentChange < 0">keyboard_arrow_down</i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <div class="bods col col-lg-6">
-    <div class="card">
-      <table class="material-table">
-        <thead class="sticky-top">
-          <tr>
-            <th> ALTIN</th>
-            <th>ALIŞ</th>
-            <th>SATIŞ</th>
-            <th></th>
-          </tr>
-        </thead>
-        <tbody *ngFor="let gramadata of ziynetList; let i=index; trackBy : trackByPrice"  [ngClass]="{'grid-up': gramadata.askPercentChange >0,
-          'grid-down': gramadata.askPercentChange <0}">
-          <tr>
-            <td> {{gramadata.Code}} </td>
-            <td style="font-size: 16px;">{{gramadata.Bid| number:'1.2-4' }}</td>
-            <td style="font-size: 16px;">{{gramadata.Ask| number:'1.2-4' }}</td>
-            <td style="font-size: 16px;">
-              <i class="material-icons" *ngIf="gramadata.askPercentChange > 0">keyboard_arrow_up</i>
-              <i class="material-icons" *ngIf="gramadata.askPercentChange == 0">remove</i>
-              <i class="material-icons" *ngIf="gramadata.askPercentChange < 0">keyboard_arrow_down</i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div id='Portfolio '>
+    <div class='jumbotron container-fluid'>
+      <div class='row no-padding' style="margin-left: 2em">
+        <div class="bods col col-lg-4">
+          <div class="card">
+            <table class="material-table">
+              <thead class="sticky-top">
+                <tr>
+                  <th> ALTIN</th>
+                  <th>ALIŞ</th>
+                  <th>SATIŞ</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let gramadata of ziynetList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': gramadata.askPercentChange >0,
+                'grid-down': gramadata.askPercentChange <0}">
+                <tr>
+                  <td> {{gramadata.Code}} </td>
+                  <td style="font-size: 16px;">{{gramadata.Bid| number:'1.2-4' }}</td>
+                  <td style="font-size: 16px;">{{gramadata.Ask| number:'1.2-4' }}</td>
+                  <td style="font-size: 16px;">
+                    <i class="material-icons" *ngIf="gramadata.askPercentChange > 0">keyboard_arrow_up</i>
+                    <i class="material-icons" *ngIf="gramadata.askPercentChange == 0">remove</i>
+                    <i class="material-icons" *ngIf="gramadata.askPercentChange < 0">keyboard_arrow_down</i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+
+        <div class="bods col col-lg-4">
+          <div class="card">
+            <table class="material-table">
+              <thead class="sticky-top">
+                <tr>
+
+                  <th> DOVIZ</th>
+                  <th>ALIŞ</th>
+                  <th>SATIŞ</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let socketData of currencyList; let i=index; trackBy : trackByPrice" [ngClass]="{'grid-up': socketData.askPercentChange >0,
+                     'grid-down': socketData.askPercentChange <0}">
+                <tr>
+                  <td> {{socketData.Code}} </td>
+                  <td style="font-size: 16px;">{{socketData.Bid | number:'1.2-4' }}</td>
+                  <td style="font-size: 16px;">{{socketData.Ask | number:'1.2-4' }} </td>
+                  <td style="margin-left:70% ;font-size: 16px;">
+                    <i class="material-icons" *ngIf="socketData.askPercentChange > 0">keyboard_arrow_up</i>
+                    <i class="material-icons" *ngIf="socketData.askPercentChange == 0">remove</i>
+                    <i class="material-icons" *ngIf="socketData.askPercentChange < 0">keyboard_arrow_down</i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class='col-sm-4' style="margin-top: 15em;">
+          <div class='portfolio'>
+            <app-pricecalc></app-pricecalc>
+          </div>
+        </div>
+
+      </div>
     </div>
   </div>
 </div>
-
