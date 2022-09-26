@@ -1,27 +1,62 @@
-# Asyildiz
+# 
+# <p align="center">  NG-Website </p>
+ <b> I converted the old website design I reached into a website. </b>
+ 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
+## Badges
 
-## Development server
+Use it as you want
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
 
-## Code scaffolding
+**Client:** Angular, TS
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+**Server:** 
 
-## Build
+## Making
+- Ease of Use.
+- Angular
+- Material
+- Bootstrap
+- IvyCarouselModule
+- IvyCarouselModule
+ 
+## Screenshots
+<img src="src/assets/media/1.png">
+<img src="src/assets/media/2.png">
+<img src="src/assets/media/3.png">
+<img src="src/assets/media/4.png">
+<img src="src/assets/media/5.png">
+<img src="src/assets/media/6.png">
+<img src="src/assets/media/6dark.png">
+<img src="src/assets/media/7.png">
+<img src="src/assets/media/8-5.png">
+<img src="src/assets/media/8.png">
+<img src="src/assets/media/9.png">
+<img src="src/assets/media/10.png">
+<img src="src/assets/media/11.png">
+<img src="src/assets/media/12.png">
+<img src="src/assets/media/13.png">
+<img src="src/assets/media/14.png">
+<img src="src/assets/media/15.png">
+<img src="src/assets/media/16.png">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## For Support
+For support, send an email to oguzhancart1@gmail.com or you are invited to our telegram channel https://t.me/vsform_tr  
+ 
+## Contact Me
+<p align="left">
+<a href="https://codepen.io/oguzhan1881" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codepen.svg" alt="oguzhan1881" height="30" width="40" /></a>
+<a href="https://dev.to/oguzhan18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/devto.svg" alt="oguzhan18" height="30" width="40" /></a>
+<a href="https://twitter.com/oguzhancart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="oguzhancart" height="30" width="40" /></a>
+<a href="https://linkedin.com/in/o%c4%9fuzhan-%c3%a7art-b73405199/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="o%c4%9fuzhan-%c3%a7art-b73405199/" height="30" width="40" /></a>
+<a href="https://codesandbox.com/oguzhan18" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/codesandbox.svg" alt="oguzhan18" height="30" width="40" /></a>
+<a href="https://instagram.com/oguzhan_cart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="oguzhan_cart" height="30" width="40" /></a>
+<a href="https://dribbble.com/cart188" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/dribbble.svg" alt="cart188" height="30" width="40" /></a>
+<a href="https://hashnode.com/@oguzhancart" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hashnode.svg" alt="@oguzhancart" height="30" width="40" /></a>
+<a href="https://www.leetcode.com/oguzhan18/" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="oguzhan18/" height="30" width="40" /></a>
+</p>
