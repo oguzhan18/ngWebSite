@@ -205,6 +205,12 @@
 
 
 
+@media screen and (max-width: 450px) {
+  .responsiveimg {
+  margin-left: 5em;
+  }
+}
+
 @mixin aspect-ratio($width, $height) {
   position: relative;
 

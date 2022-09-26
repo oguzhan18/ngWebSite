@@ -1,15 +1,28 @@
 <div class="slider">
   <div class="slide-track">
     <div class="slide" *ngFor="let data of footerList; trackBy : trackByPrice">
-      <div class="text-parity">
+      <div class="text-parity col-lg-3" >
         {{data.Code}}
-      </div>
-      <div class="text-price">
-        <span [ngClass]="{'grid-up': data.askPercentChange >0,
-          'grid-down': data.askPercentChange <0}">   {{data.Ask | number:'1.2-4'}} {{data.Bid | number:'1.2-4'}}</span>
 
+        <div class="text-price">
+          <span [ngClass]="
+          {
+            'grid-up': data.askPercentChange > 0  ,
+            'grid-stabil': data.askPercentChange == 0 ,
+            'grid-down': data.askPercentChange < 0
+          }"> {{data.Ask | number:'1.2-4'}} {{data.Bid | number:'1.2-4'}}</span>
+        </div>
+      </div>
+      <div class="text-price " style="margin-left:5em;"[ngClass]="
+      {
+        'grid-up': data.askPercentChange > 0  ,
+        'grid-stabil': data.askPercentChange == 0 ,
+        'grid-down': data.askPercentChange < 0
+      }">
+        <i class="material-icons"*ngIf="data.askPercentChange < 0" >arrow_downward</i>
+        <i class="material-icons" *ngIf="data.askPercentChange > 0">arrow_upward</i>
+        <i class="material-icons" *ngIf="data.askPercentChange == 0">remove</i>
       </div>
     </div>
   </div>
-
 </div>

@@ -22,7 +22,7 @@ $animationSpeed: 40s;
 .slider {
   margin-top: 3em;
   overflow: hidden;
-  height: 40px;
+  height: 100px;
   width: 100%;
   display: flex;
   z-index: 1;
@@ -100,3 +100,12 @@ a {
 
 
 }
+.grid-up{
+  color: rgb(50, 178, 50);
+}
+.grid-down{
+  color: rgb(165, 39, 20);
+}.grid-stabil{
+  color: rgb(255, 200, 90);
+}
+

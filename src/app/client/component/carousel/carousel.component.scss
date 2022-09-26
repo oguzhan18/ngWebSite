@@ -60,10 +60,8 @@ body {
   list-style: none;
   position: relative;
   width: 500%;
-  height: 70vh;
-  /* Number of panes * 100% */
+  // height: 70vh;
   overflow: hidden;
-  /* This is used solely to clear floats, it does not add functionality. */
 
   -moz-animation: carousel 30s infinite;
   -webkit-animation: carousel 30s infinite;
@@ -74,7 +72,6 @@ body {
   position: relative;
   float: left;
   width: 20%;
-  /* 100 / number of panes */
 }
 
 .carousel img {

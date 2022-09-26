@@ -11,7 +11,7 @@ export class HomeComponent {
   ngAfterViewInit(){
     new TradingView.widget(
       {
-        width: '77%',
+        width: '100%',
         height: '25em',
         symbol: 'USD/TRY',
         timezone: 'Etc/UTC',

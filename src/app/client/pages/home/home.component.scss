@@ -1,4 +1,29 @@
-div{
-  // margin-left:15em ;
-  margin-top: 5em;
+// .chart {
+//   margin: auto;
+//   width: 60%;
+//   padding: 10px;
+//   position: relative;
+//   right: 13em;
+// }
+
+@media screen and (max-width: 600px) {
+
+  .chart {
+
+    position: relative;
+    width:100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+
+  .chart {
+    margin: auto;
+    width: 65%;
+    padding: 10px;
+    position: relative;
+    right: 18em;
+    margin-top: 5em;
+
+  }
 }
